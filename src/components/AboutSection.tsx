@@ -170,38 +170,7 @@ const AboutSection = () => {
           </div>
         </motion.div>
 
-        {/* Team */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl font-bold text-slate-900 text-center mb-12">Meet Our Team</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-              >
-                <div className="h-64 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
-                  <Users className="h-20 w-20 text-slate-400" />
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h4>
-                  <p className="text-primary font-semibold mb-2">{member.position}</p>
-                  <p className="text-sm text-slate-500 mb-3">{member.credentials}</p>
-                  <p className="text-slate-600 leading-relaxed">{member.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
 
         {/* Testimonials */}
         <motion.div

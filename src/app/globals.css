@@ -31,7 +31,7 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
+  --font-serif: var(--font-roboto-slab);
 }
 
 @media (prefers-color-scheme: dark) {

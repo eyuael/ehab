@@ -230,59 +230,7 @@ const ServicesSection = () => {
           ))}
         </motion.div>
 
-        {/* Pricing Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl font-bold text-slate-900 text-center mb-12">Service Packages</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
-              <motion.div
-                key={tier.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`bg-white rounded-xl shadow-lg overflow-hidden ${
-                  tier.popular ? 'ring-2 ring-primary transform scale-105' : ''
-                }`}
-              >
-                {tier.popular && (
-                  <div className="bg-primary text-white text-center py-2 text-sm font-semibold">
-                    Most Popular
-                  </div>
-                )}
-                <div className="p-8">
-                  <h4 className="text-2xl font-bold text-slate-900 mb-2">{tier.name}</h4>
-                  <p className="text-slate-600 mb-6">{tier.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-slate-900">{tier.price}</span>
-                    <span className="text-slate-500">{tier.period}</span>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-slate-600">
-                        <Check className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
-                    tier.popular
-                      ? 'bg-primary hover:bg-blue-700 text-white'
-                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-                  }`}>
-                    Get Started
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
 
         {/* Case Studies */}
         <motion.div

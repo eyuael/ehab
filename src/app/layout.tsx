@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,9 +9,9 @@ const inter = Inter({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
+const robotoSlab = localFont({
+  src: "../../Roboto_Slab/RobotoSlab-VariableFont_wght.ttf",
+  variable: "--font-roboto-slab",
   display: "swap",
 });
 
@@ -90,7 +91,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#1e40af" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${robotoSlab.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
